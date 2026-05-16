@@ -1,3 +1,4 @@
+import 'package:catatan_kuliah/main.dart';
 import 'package:catatan_kuliah/models/course.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -22,6 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     _searchController.dispose();
     super.dispose();
+  }
+
+  void _toggleTheme() {
+    themeModeNotifier.value = themeModeNotifier.value == ThemeMode.dark
+        ? ThemeMode.light
+        : ThemeMode.dark;
   }
 
   String formatTime(DateTime dateTime) {
@@ -91,6 +98,16 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             icon: const Icon(Icons.school),
             tooltip: 'Kelola Mata Kuliah',
+          ),
+          ValueListenableBuilder<ThemeMode>(
+            valueListenable: themeModeNotifier,
+            builder: (_, mode, __) => IconButton(
+              onPressed: _toggleTheme,
+              icon: Icon(
+                mode == ThemeMode.dark ? Icons.light_mode : Icons.dark_mode,
+              ),
+              tooltip: mode == ThemeMode.dark ? 'Light Mode' : 'Dark Mode',
+            ),
           ),
         ],
       ),
