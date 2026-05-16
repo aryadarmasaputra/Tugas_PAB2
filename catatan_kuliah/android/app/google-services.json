@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "216046358353",
+    "firebase_url": "https://catatankuliah-5721c-default-rtdb.firebaseio.com",
+    "project_id": "catatankuliah-5721c",
+    "storage_bucket": "catatankuliah-5721c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216046358353:android:d1723fbe7510a057e20d70",
+        "android_client_info": {
+          "package_name": "com.example.catatan_kuliah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbvhcs4XzOIqUlPwUnOnoI8s1Dp3QVffU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
